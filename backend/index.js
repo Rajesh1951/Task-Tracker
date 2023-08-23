@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const router = require('./routes/appRoutes')
+const cors = require('cors')
 dotenv.config()
 
 // DB CONNECTION
@@ -13,6 +14,10 @@ mongoose.connect(process.env.MONGOURI)
 
 const app = express();
 app.use(express.json())
+const corsConfig={
+  origin:['http://localhost:3000']
+}
+app.use(cors(corsConfig))
 app.use(router)
 
 app.get('/', (req, res) => {

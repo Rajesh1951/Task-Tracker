@@ -1,0 +1,55 @@
+#page {
+  min-height: 100vh;
+  background-color: rgb(81, 157, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  padding: 3rem;
+  border-radius: 2rem;
+  min-height: 50vh;
+  background-color: white;
+}
+
+#toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle>button {
+  margin: 1rem;
+}
+
+#main {
+  min-height: 90%;
+}
+
+#main>form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: medium;
+  min-width: 20vw;
+  margin-bottom: 2vh;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: large;
+}
+
+label{
+  font-size: larger;
+  margin-bottom: 0px;
+}

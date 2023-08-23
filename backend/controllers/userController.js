@@ -2,7 +2,6 @@ const User = require('../models/userAuth')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const createToken = (id) => {
-  console.log(id)
   return jwt.sign(id, process.env.JWT)
 }
 const handleError = (err) => {
@@ -41,7 +40,7 @@ module.exports.login = async (req, res) => {
               res.json(createToken(String(user._id)))
             }
             else {
-              res.send('wrong password')
+              res.json({ "error": "Wrong Password" });
             }
           })
       })
