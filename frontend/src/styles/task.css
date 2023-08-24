@@ -1,0 +1,13 @@
+#list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task{
+  /* width: 10vw; */
+  min-height: 10vh;
+  display: flex;
+  background: red;
+}

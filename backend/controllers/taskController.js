@@ -16,9 +16,10 @@ module.exports.getList = async (req, res) => {
 }
 
 module.exports.createTask = async (req, res) => {
-  const id = await decoder(req.headers.authorization.split(' ')[1]);
+  console.log(req.headers)
   const { name, status, priority } = req.body;
   try {
+    const id = await decoder(req.headers.authorization.split(' ')[1]);
     const task = new Task({ name, status, priority, userId: id });
     const saved = await task.save();
     console.log(saved)
@@ -48,8 +49,7 @@ module.exports.deleteTask = async (req, res) => {
 }
 
 module.exports.updateTask = async (req, res) => {
-  const id = await decoder(req.headers.authorization.split(' ')[1]);
-  const { name, status, priority } = req.body;
+  const { id,name, status, priority } = req.body;
   try {
     Task.findByIdAndUpdate(id,
       {
