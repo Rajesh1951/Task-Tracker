@@ -12,7 +12,7 @@ function Dashboard() {
     {
       name: '',
       priority: 'High',
-      status: 'Done'
+      status: 'Pending'
     });
   const [toggle, setToggle] = useState(false)
   const fetch = async () => {
@@ -46,6 +46,11 @@ function Dashboard() {
     e.preventDefault()
     await updateTask({ id: task._id, ...task })
     setToggle(false)
+    setTask({
+      name: '',
+      priority: 'High',
+      status: 'Pending'
+    })
     setTimeout(async () => {
       await fetch();
     }, 500);
@@ -67,7 +72,7 @@ function Dashboard() {
   }
   const handleSearch = (e) => {
     e.preventDefault()
-    const l = initialList.filter(i => i.name.includes(query))
+    const l = initialList.filter(i => i.name.toLowerCase().includes(query.toLowerCase()))
     setList(handleFilter(l))
   }
   function handleLogout() {
