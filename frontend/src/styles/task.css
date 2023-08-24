@@ -1,13 +1,156 @@
-#list{
+#heading{
+  text-align: center;
+}
+#list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.task{
-  /* width: 10vw; */
-  min-height: 10vh;
+body {
+  background: #1a202c;
+  color: #cdd7ea;
+  padding-top: 10px;
+}
+
+#search {
+  margin: 5px;
   display: flex;
-  background: red;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 5px 5px;
+}
+
+#input {
+  border-radius: 50px;
+  background: #2d3748;
+  width: 80%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#input>form {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+select {
+  font-size: medium;
+}
+
+.searchButton,
+#filterDropDown {
+  font-size: large;
+  padding: 3px 5px;
+  margin: 2px;
+}
+
+.taskButtons {
+  padding: 1px 5px;
+  margin: 2px;
+  font-size: medium;
+}
+
+table {
+  min-width: 40vw;
+}
+
+th {
+  text-align: left;
+}
+
+.bottomBorder {
+  width: 50vw;
+  height: 2px;
+  background: black;
+}
+
+.addButton {
+  height: fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: medium;
+}
+
+button {
+  border-radius: 2px;
+  border: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+
+td {
+  color: black;
+  padding: 2px;
+  padding-left: 4px;
+}
+
+.Done {
+  background: #25D366;
+}
+
+.Progress {
+  background: #FFD700;
+}
+.Pending {
+  background: #f82d2d;
+}
+
+#filter {
+  font-size: large;
+  margin-left: 5px;
+}
+
+.center {
+  display: inline;
+}
+
+.dashInput {
+  font-size: medium;
+}
+
+#logout {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: medium;
+}
+
+@media (max-width:450px) {
+  #input>form {
+    flex-direction: column;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+  }
+
+  select,
+  #input>form>label,
+  #center {
+    margin: auto auto;
+  }
+
+  table {
+    width: 90vw;
+  }
+
+  #search {
+    flex-direction: column;
+  }
+
+  .searchButton {
+    font-size: medium;
+  }
 }

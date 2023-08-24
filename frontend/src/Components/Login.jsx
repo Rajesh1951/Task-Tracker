@@ -47,8 +47,8 @@ function Login() {
       <div id='container'>
         <h1>Welcome to Task Tracker</h1>
         <div id="toggle">
-          <button onClick={() => setToggle(true)} style={toggle ? { backgroundColor: "green" } : { backgroundColor: "grey" }}>Login</button>
-          <button onClick={() => setToggle(false)} style={toggle ? { backgroundColor: "grey" } : { backgroundColor: "green" }}>Signup</button>
+          <button className='toggleButton' onClick={() => setToggle(true)} style={toggle ? { backgroundColor: "green" } : { backgroundColor: "grey" }}>Login</button>
+          <button className='toggleButton' onClick={() => setToggle(false)} style={toggle ? { backgroundColor: "grey" } : { backgroundColor: "green" }}>Signup</button>
         </div>
         <div id="main">
           <form>
@@ -56,10 +56,10 @@ function Login() {
               <input id='name' name='name' onChange={(e) => handleChange(e)} type="text" value={data.name} />
             </>}
             <label htmlFor='email'>Email</label>
-            <input name='email' onChange={(e) => handleChange(e)} type="text" value={data.email} />
+            <input name='email' id='email' placeholder='asd@gmail.com' onChange={(e) => handleChange(e)} type="text" value={data.email} />
             <label htmlFor='password'>Password</label>
-            <input name='password' onChange={(e) => handleChange(e)} type="text" value={data.password} />
-            <button type='submit' onClick={(e) => handleSubmit(e)}>{toggle ? 'Login' : 'Signup'}</button>
+            <input name='password' id='password' placeholder='asd' onChange={(e) => handleChange(e)} type="text" value={data.password} />
+            <button className='loginButton' type='submit' onClick={(e) => handleSubmit(e)}>{toggle ? 'Login' : 'Signup'}</button>
           </form>
         </div>
       </div>
