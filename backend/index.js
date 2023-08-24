@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGOURI)
 const app = express();
 app.use(express.json())
 const corsConfig={
-  origin:['http://localhost:3000']
+  origin:['http://localhost:3000','https://task-tracker-rajesh.netlify.app']
 }
 app.use(cors(corsConfig))
 app.use(router)
