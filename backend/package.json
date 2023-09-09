@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"node index.js",
-    "build":"npm i"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "author": "Rajesh",
   "license": "ISC",
